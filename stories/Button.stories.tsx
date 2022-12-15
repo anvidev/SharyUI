@@ -29,3 +29,11 @@ Secondary.args = {
   children: 'Secondary button',
   onClick: action('secondary clicked'),
 };
+
+export const Success = Template.bind({});
+
+Success.args = {
+  variant: 'success',
+  children: 'Success button',
+  onClick: action('Success clicked'),
+};
