@@ -1,1 +1,1 @@
-export { Button } from './Atoms/Button';
+export { Button } from './components/Button';
