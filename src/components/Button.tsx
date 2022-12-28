@@ -10,7 +10,7 @@ export interface Props extends HTMLAttributes<HTMLButtonElement> {
 /**  This is a special button!!! */
 export const Button = ({ children, variant = 'primary', ...props }: Props) => {
   return (
-    <button {...props} className="text-lg text-indigo-500 bg-black p-4 rounded">
+    <button {...props} className="text-lg text-purple-500 bg-black p-4 rounded">
       {children}
     </button>
   );
