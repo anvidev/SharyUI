@@ -10,24 +10,7 @@ export interface Props extends HTMLAttributes<HTMLButtonElement> {
 /**  This is a special button!!! */
 export const Button = ({ children, variant = 'primary', ...props }: Props) => {
   return (
-    <button
-      {...props}
-      style={{
-        backgroundColor: variant === 'primary' ? '#5b2ee2' : '#078c54',
-        minWidth: '175px',
-        height: '45px',
-        margin: '10px auto',
-        border: 'none',
-        borderRadius: '4px',
-        color: '#fff',
-        fontStyle: 'normal',
-        fontWeight: '700',
-        fontSize: '16px',
-        lineHeight: '24px',
-        transition: '0.3s ease',
-        cursor: 'pointer',
-      }}
-    >
+    <button {...props} className="text-lg text-indigo-500 bg-black p-4 rounded">
       {children}
     </button>
   );
