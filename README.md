@@ -8,7 +8,7 @@ SharyUI was built to speed up implementation flow of Shary's developers and to h
 
 ## Installation
 
-Material UI is available as an [npm package](https://www.npmjs.com/).
+SharyUI is available as an [npm package](https://www.npmjs.com/).
 
 **npm:**
 
