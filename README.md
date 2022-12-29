@@ -1,6 +1,6 @@
 # SharyUI
 
-## A customised UI library for [myshary.com](https://myshary.com/feed)
+## Customised UI library for [myshary.com](https://myshary.com/feed)
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
