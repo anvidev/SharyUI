@@ -1,4 +1,4 @@
-import React, { FC, HTMLAttributes, ReactNode, useMemo } from 'react';
+import React, { HTMLAttributes, ReactNode, useMemo } from 'react';
 
 export interface Props extends HTMLAttributes<HTMLButtonElement> {
   /** Label of button */
@@ -12,12 +12,10 @@ export interface Props extends HTMLAttributes<HTMLButtonElement> {
     | 'ghost';
   //** The size of button to use */
   size?: 'sm' | 'md' | 'lg';
-  /** If added, the button will show an icon before the button's label */
-  leftIcon?: boolean;
-  /** If added, the button will show an icon after the button's label */
-  rightIcon?: React.ReactElement;
+  /** If `true`, the button will add a gap for the content of the button */
+  icon?: boolean;
   /** If `true`, the button will take up full width of parent element */
-  block?: boolean;
+  fullWidth?: boolean;
   /** The html button type to use */
   type?: 'button' | 'reset' | 'submit';
   /** If `true`, the button will be disabled */
@@ -30,22 +28,22 @@ const BASE_BUTTON_CLASSES =
 const getVariantClasses = (variant: string) => {
   switch (variant) {
     case 'primary':
-      return 'bg-primary hover:bg-primaryLight transition-all duration-200 ease-linear focus:outline-none focus:border-primaryLight focus:ring-2 focus:ring-primaryLight disabled:bg-disabled';
+      return 'bg-primary hover:bg-primaryLight transition-all duration-200 ease-linear focus:outline-none focus:border-primaryLight focus:ring-2 focus:ring-primaryLight disabled:bg-disabled disabled:pointer-events-none';
       break;
     case 'secondary':
-      return 'bg-secondary hover:bg-secondaryLight transition-all duration-200 ease-linear focus:outline-none focus:border-secondaryLight focus:ring-2 focus:ring-secondaryLight disabled:bg-disabled';
+      return 'bg-secondary hover:bg-secondaryLight transition-all duration-200 ease-linear focus:outline-none focus:border-secondaryLight focus:ring-2 focus:ring-secondaryLight disabled:bg-disabled disabled:pointer-events-none';
       break;
     case 'outline-primary':
-      return 'bg-transparent text-primary border-2 border-primary hover:bg-primaryLight hover:text-white transition-all ease-linear duration-200 focus:bg-primaryLight disabled:border-disabled disabled:text-disabled';
+      return 'bg-transparent text-primary border-2 border-primary hover:bg-primaryLight hover:text-white transition-all ease-linear duration-200 focus:bg-primaryLight focus:text-white focus:outline-none disabled:border-disabled disabled:text-disabled disabled:pointer-events-none';
       break;
     case 'outline-secondary':
-      return 'bg-transparent text-secondary border-2 border-secondary hover:bg-secondaryLight hover:text-white transition-all duration-200 ease-linear focus:bg-secondaryLight disabled:border-disabled disabled:text-disabled';
+      return 'bg-transparent text-secondary border-2 border-secondary hover:bg-secondaryLight hover:text-white transition-all duration-200 ease-linear focus:bg-secondaryLight focus:text-white focus:outline-none disabled:border-disabled disabled:text-disabled disabled:pointer-events-none';
       break;
     case 'ghost':
-      return 'bg-transparent !text-black hover:bg-disabled transition-all duration-200 ease-linear focus:outline-none focus:border-black focus:ring-2 focus:ring-black disabled:text-disabled';
+      return 'bg-transparent !text-black hover:bg-disabled transition-all duration-200 ease-linear focus:outline-none focus:border-black focus:ring-2 focus:ring-black disabled:!text-disabled disabled:pointer-events-none';
       break;
     default:
-      return 'bg-primary hover:bg-primaryLight transition-all duration-200 ease-linear focus:outline-none focus:border-primaryLight focus:ring-2 focus:ring-primaryLight disabled:bg-disabled';
+      return 'bg-primary hover:bg-primaryLight transition-all duration-200 ease-linear focus:outline-none focus:border-primaryLight focus:ring-2 focus:ring-primaryLight disabled:bg-disabled disabled:pointer-events-none';
       break;
   }
 };
@@ -67,31 +65,29 @@ const getSizeClasses = (size: string) => {
   }
 };
 
-const getBlockClasses = (block: boolean) => (block ? 'w-full' : '');
+const getBlockClasses = (fullWidth: boolean) => (fullWidth ? 'w-full' : '');
 
-// TODO: Fix icon prop. Is it just a boolean prop or can we import icons dynamically?
-const getIconClasses = (leftIcon: boolean) => (leftIcon ? 'gap-2' : '');
+const getIconClasses = (icon: boolean) => (icon ? 'gap-2' : '');
 
 //** Button Component */
 export const Button = ({
   variant = 'primary',
   size = 'sm',
-  block = false,
+  fullWidth = false,
   type = 'button',
   disabled = false,
-  leftIcon = false,
-  rightIcon,
+  icon = false,
   children,
   ...props
 }: Props) => {
   const computedClasses = useMemo(() => {
     const buttonVariant = getVariantClasses(variant);
     const buttonSize = getSizeClasses(size);
-    const buttonBlock = getBlockClasses(block);
-    const buttonIcon = getIconClasses(leftIcon);
+    const buttonBlock = getBlockClasses(fullWidth);
+    const buttonIcon = getIconClasses(icon);
 
     return [buttonVariant, buttonSize, buttonBlock, buttonIcon].join(' ');
-  }, [variant, size, block, leftIcon]);
+  }, [variant, size, fullWidth, icon]);
 
   return (
     <button
