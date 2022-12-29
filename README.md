@@ -27,7 +27,7 @@ yarn add sharyui
 Here is an example of a basic app using SharyUI's `Button` component:
 
 ```jsx
-import { Button } from 'sharyui/Button';
+import { Button } from 'sharyui';
 
 function App() {
   return <Button variant="secondary">Hello World</Button>;
