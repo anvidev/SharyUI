@@ -4,7 +4,7 @@
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
-SharyUI was built to speed up implementation flow of Shary's developers and to help them improve design consistency with a centralised design center.
+SharyUI was built to speed up implementation flow of Shary's developers and to help them improve design consistency by having a centralised design center for all of their UI components.
 
 ## Installation
 
