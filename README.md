@@ -36,12 +36,12 @@ function App() {
 
 ## List of components
 
-- [ ] Button
+- [x] Button
 - [ ] Icon button
 - [ ] Label
 - [ ] Input
 - [x] Heading
-- [ ] Text
+- [x] Text
 - [ ] Select
 - [ ] Checkbox/radio
 - [x] Avatar
