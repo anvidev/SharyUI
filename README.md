@@ -38,7 +38,7 @@ function App() {
 
 - [x] Button
 - [ ] Icon button
-- [ ] Label
+- [x] Label
 - [ ] Input
 - [x] Heading
 - [x] Text
