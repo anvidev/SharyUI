@@ -11,7 +11,7 @@ export interface Props extends HTMLAttributes<HTMLButtonElement> {
     | 'outline-secondary'
     | 'ghost';
   //** The size of button to use */
-  size?: 'sm' | 'md' | 'lg';
+  size?: 'small' | 'medium' | 'large';
   /** If `true`, the button will add a gap for the content of the button */
   icon?: boolean;
   /** If `true`, the button will take up full width of parent element */
@@ -50,17 +50,15 @@ const getVariantClasses = (variant: string) => {
 
 const getSizeClasses = (size: string) => {
   switch (size) {
-    case 'sm':
+    default:
+    case 'small':
       return 'h-8';
       break;
-    case 'md':
+    case 'medium':
       return 'h-10';
       break;
-    case 'lg':
+    case 'large':
       return 'h-12';
-      break;
-    default:
-      return 'h-8';
       break;
   }
 };
@@ -72,7 +70,7 @@ const getIconClasses = (icon: boolean) => (icon ? 'gap-2' : '');
 //** Button Component */
 export const Button = ({
   variant = 'primary',
-  size = 'sm',
+  size = 'small',
   fullWidth = false,
   type = 'button',
   disabled = false,
