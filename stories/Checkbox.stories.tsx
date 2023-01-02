@@ -3,7 +3,7 @@ import { Meta, Story } from '@storybook/react';
 import { Checkbox, Props } from '../src/components/Checkbox';
 
 const meta: Meta = {
-  title: 'Components/Checkbox',
+  title: 'Components/Atoms/Checkbox',
   component: Checkbox,
 };
 

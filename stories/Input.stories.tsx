@@ -3,7 +3,7 @@ import { Meta, Story } from '@storybook/react';
 import { Input, Props } from '../src/components/Input';
 
 const meta: Meta = {
-  title: 'Components/Input',
+  title: 'Components/Atoms/Input',
   component: Input,
 };
 

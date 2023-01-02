@@ -3,7 +3,7 @@ import { Meta, Story } from '@storybook/react';
 import { Text, Props } from '../src/components/Text';
 
 const meta: Meta = {
-  title: 'Components/Text',
+  title: 'Components/Atoms/Text',
   component: Text,
 };
 
