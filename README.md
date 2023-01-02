@@ -41,7 +41,8 @@ function App() {
 - [x] Heading
 - [x] Text
 - [ ] Select
-- [ ] Checkbox/radio
+- [x] Checkbox
+- [ ] Radio
 - [x] Avatar
 - [ ] Tooltip
 - [ ] Modal
