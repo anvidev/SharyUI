@@ -14,7 +14,7 @@ const getSizeClasses = (size: string) => {
   switch (size) {
     default:
     case 'small':
-      return 'text-small';
+      return 'text-sm';
       break;
     case 'medium':
       return 'text-base';
