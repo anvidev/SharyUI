@@ -39,7 +39,7 @@ function App() {
 - [x] Button
 - [ ] Icon button
 - [x] Label
-- [ ] Input
+- [x] Input
 - [x] Heading
 - [x] Text
 - [ ] Select
