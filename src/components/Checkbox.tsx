@@ -49,6 +49,7 @@ export const Checkbox = ({
           name={name}
           id={id}
           value={value}
+          {...props}
         />
         <label
           className="absolute text-sm select-none peer-checked:text-white"

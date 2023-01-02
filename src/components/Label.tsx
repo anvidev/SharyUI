@@ -19,7 +19,7 @@ export const Label = ({
   ...props
 }: Props) => {
   return (
-    <label className={`${BASE_LABEL_CLASSES}`} htmlFor={inputId}>
+    <label className={`${BASE_LABEL_CLASSES}`} htmlFor={inputId} {...props}>
       {children}
       {required && <span className="text-red-500">*</span>}
     </label>

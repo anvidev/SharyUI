@@ -90,6 +90,7 @@ export const Input = ({
       name={inputId}
       pattern={getRegex(pattern)}
       type={type}
+      {...props}
     />
   );
 };
