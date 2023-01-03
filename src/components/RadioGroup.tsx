@@ -4,7 +4,7 @@ import { Radio } from './Radio';
 
 export interface Props extends HTMLAttributes<HTMLInputElement> {
   /** Variant of radio */
-  variant?: 'box' | 'chip';
+  variant?: 'circle' | 'chip';
   /** Group name of radios */
   name: string;
   /** ID of radio */
@@ -20,7 +20,7 @@ export interface Props extends HTMLAttributes<HTMLInputElement> {
 }
 
 export const RadioGroup = ({
-  variant = 'box',
+  variant = 'circle',
   name,
   id,
   value,
