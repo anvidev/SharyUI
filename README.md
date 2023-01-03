@@ -60,7 +60,7 @@ function App() {
 - [ ] Modal
 - [ ] Input Group
 - [ ] Checkbox Group
-- [ ] Radio Group
+- [x] Radio Group
 
 ## Documentation
 
