@@ -18,7 +18,7 @@ npm install tailwindcss@latest
 yarn add tailwindcss@latest
 ```
 
-Next, make sure to init tailwind as per their documentation, and import the library stylesheet from `node_modules/sharyui/dist/styles.css`. This is due to an issue with tailwind not compiling the classes when used with storybook at the moment.
+Next, make sure to init tailwind as per their documentation, and import the library stylesheet from `node_modules/sharyui/dist/styles.css` in your `main.js` file or in your root component. This is due to an issue with tailwind not compiling the classes when used with storybook at the moment.
 
 **npm:**
 
