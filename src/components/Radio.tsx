@@ -2,7 +2,7 @@ import React, { HTMLAttributes, useMemo } from 'react';
 
 export interface Props extends HTMLAttributes<HTMLInputElement> {
   /** Variant of radio */
-  variant?: 'box' | 'chip';
+  variant?: 'circle' | 'chip';
   /** Group name of radios */
   name: string;
   /** ID of radio */
@@ -17,7 +17,7 @@ const BASE_RADIO_CLASSES =
 const getVariantClasses = (variant: string) => {
   switch (variant) {
     default:
-    case 'box':
+    case 'circle':
       return 'rounded-full checked:bg-white checked:before:block checked:before:bg-primary checked:before:w-4 checked:before:h-4 checked:before:rounded-full';
       break;
     case 'chip':
@@ -28,7 +28,7 @@ const getVariantClasses = (variant: string) => {
 
 /** Checkbox component */
 export const Radio = ({
-  variant = 'box',
+  variant = 'circle',
   name,
   id,
   value,

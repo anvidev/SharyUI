@@ -16,7 +16,7 @@ TypeBox.args = {
   name: 'exampleName',
   id: 'exampleId',
   value: false,
-  label: 'This is a checkbox group',
+  label: 'This is a radio group',
 };
 
 export const TypeBoxRequired = Template.bind({});
@@ -24,7 +24,7 @@ TypeBoxRequired.args = {
   name: 'exampleName',
   id: 'exampleId',
   value: false,
-  label: 'This is a required checkbox group',
+  label: 'This is a required radio group',
   required: true,
 };
 
@@ -34,7 +34,7 @@ TypeChip.args = {
   name: 'exampleName',
   id: 'exampleId',
   value: false,
-  label: 'This is a checkbox group',
+  label: 'This is a radio group',
 };
 
 export const TypeChipRequired = Template.bind({});
@@ -43,6 +43,6 @@ TypeChipRequired.args = {
   name: 'exampleName',
   id: 'exampleId',
   value: false,
-  label: 'This is a checkbox group',
+  label: 'This is a required radio group',
   required: true,
 };
