@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.btn {
+  @apply flex items-center justify-center px-4 text-base font-semibold text-white rounded;
+}
+
+.btn-primary {
+  @apply transition-all duration-200 ease-linear bg-primary hover:bg-primaryLight focus:outline-none focus:border-primaryLight focus:ring-2 focus:ring-primaryLight disabled:bg-disabled disabled:pointer-events-none;
+}
+
+.btn-small {
+  @apply h-8;
+}
