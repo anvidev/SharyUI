@@ -42,7 +42,7 @@ function App() {
 - [x] Text
 - [ ] Select
 - [x] Checkbox
-- [ ] Radio
+- [x] Radio
 - [x] Avatar
 - [ ] Tooltip
 - [ ] Modal
