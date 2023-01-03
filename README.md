@@ -46,6 +46,9 @@ function App() {
 - [x] Avatar
 - [ ] Tooltip
 - [ ] Modal
+- [ ] Input Group
+- [ ] Checkbox Group
+- [ ] Radio Group
 
 ## Documentation
 
