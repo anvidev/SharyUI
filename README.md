@@ -59,7 +59,7 @@ function App() {
 - [ ] Tooltip
 - [ ] Modal
 - [ ] Input Group
-- [ ] Checkbox Group
+- [x] Checkbox Group
 - [x] Radio Group
 
 ## Documentation
