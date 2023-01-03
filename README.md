@@ -8,6 +8,18 @@ SharyUI was built to speed up implementation flow of Shary's developers and to h
 
 SharyUI is available as an [npm package](https://www.npmjs.com/).
 
+**Requirements**
+
+All of the components in SharyUI are designed with the latest version of Tailwind CSS, which is currently version 3.2. That means that Tailwind needs to be installed in your project in order for our components works. This can be done by running:
+
+```sh
+npm install tailwindcss@latest
+# or
+yarn add tailwindcss@latest
+```
+
+Next, make sure to init tailwind as per their documentation, and import the library stylesheet from `node_modules/sharyui/dist/styles.css`. This is due to an issue with tailwind not compiling the classes when used with storybook at the moment.
+
 **npm:**
 
 ```sh
