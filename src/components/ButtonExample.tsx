@@ -23,7 +23,7 @@ export interface Props extends HTMLAttributes<HTMLButtonElement> {
 }
 
 //** Button Component */
-export const Button = ({
+export const ButtonExample = ({
   variant = 'primary',
   size = 'small',
   fullWidth = false,
