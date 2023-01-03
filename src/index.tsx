@@ -5,3 +5,4 @@ export { Button } from './components/Button';
 export { Checkbox } from './components/Checkbox';
 export { Input } from './components/Input';
 export { Label } from './components/Label';
+export { Radio } from './components/Radio';
