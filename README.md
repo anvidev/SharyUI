@@ -6,9 +6,9 @@ SharyUI was built to speed up implementation flow of Shary's developers and to h
 
 ## Installation
 
-SharyUI is available as an [npm package](https://www.npmjs.com/).
+SharyUI is available as an [npm package](https://www.npmjs.com/package/sharyui).
 
-**Requirements**
+**Requirements:**
 
 All of the components in SharyUI are designed with the latest version of Tailwind CSS, which is currently version 3.2. That means that Tailwind needs to be installed in your project in order for our components works. This can be done by running:
 
@@ -52,7 +52,7 @@ function App() {
 - [x] Input
 - [x] Heading
 - [x] Text
-- [ ] Select
+- [x] Select (missing multiple choice)
 - [x] Checkbox
 - [x] Radio
 - [x] Avatar
