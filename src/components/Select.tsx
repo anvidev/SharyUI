@@ -1,4 +1,4 @@
-import React, { HTMLAttributes, useMemo, useState } from 'react';
+import React, { useMemo, useState } from 'react';
 
 type Option = {
   label: string;
@@ -6,14 +6,20 @@ type Option = {
 };
 
 export interface Props {
+  /** String content of select button. */
   placeholder: string;
+  /** Array of objects for options. */
   options: Option[];
-  isMultiple?: boolean;
+  /** if `true`, a search field will appear in options. Seaches options. */
   isSearchable?: boolean;
+  /** Choose size of select button. */
   size?: 'small' | 'medium' | 'large';
+  /** if `true`, the select will take up all available horizontal space. */
   fullWidth?: boolean;
+  /** Pass function to trigger on change of selection. */
   onChange: (selection: Option) => void;
-  selected: Option;
+  /** Pass a state value from parent component. */
+  selected: Option | null;
 }
 
 const BASE_SELECT_CLASSES =
@@ -33,6 +39,7 @@ const getSizeClasses = (size: string) => {
       break;
     case 'xlarge':
       return 'h-14';
+      break;
   }
 };
 
