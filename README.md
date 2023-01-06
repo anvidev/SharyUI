@@ -65,4 +65,4 @@ function App() {
 ## Documentation
 
 - [Developer documentation](https://shary-ui.vercel.app)
-- [Figma design](https://placeholder.com)
+- [Figma design](https://www.figma.com/file/GQmYYAGTHMLe44z3zMDXMj/SharyUI?node-id=1%3A4&t=D8lNYCLdzhLlGq5V-1)
