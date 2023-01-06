@@ -64,5 +64,5 @@ function App() {
 
 ## Documentation
 
-- [Developer documentation](https://placeholder.com)
+- [Developer documentation](https://shary-ui.vercel.app)
 - [Figma design](https://placeholder.com)
