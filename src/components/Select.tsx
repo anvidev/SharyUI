@@ -28,11 +28,11 @@ const BASE_SELECT_CLASSES =
 const getSizeClasses = (size: string) => {
   switch (size) {
     default:
-    case 'small':
-      return 'h-8';
-      break;
     case 'medium':
       return 'h-10';
+      break;
+    case 'small':
+      return 'h-8';
       break;
     case 'large':
       return 'h-12';
