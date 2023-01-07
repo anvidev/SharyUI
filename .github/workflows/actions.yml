@@ -1,32 +1,17 @@
-name: Announce the release of new version on Slack
+name: Announcement of the release for library
 run-name: ${{ github.actor }} has published new release for the library 🚀
 on:
   push:
-    branches: [notifications, main]
+    branches: [main]
 jobs:
-  Explore-GitHub-Actions:
+  slackNotification:
+    name: Slack Notification
     runs-on: ubuntu-latest
     steps:
-      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
-      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
-      - name: Check out repository code
-        uses: actions/checkout@v3
-      - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
-      - run: echo "🖥️ The workflow is now ready to test your code on the runner."
-      - name: List files in the repository
-        run: |
-          ls ${{ github.workspace }}
-      - run: echo "🍏 This job's status is ${{ job.status }}."
-  slack:
-    needs: Explore-GitHub-Actions
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: New updates released
-        run: |
-          echo "::set-output name=TITLE::$(git show -1 --format='%s' -s)"
-        id: latest_commit
-      - name: Announce on Slack
-        run: |
-          curl -X POST -H 'Content-type: application/json' --data '{"text":"Hello, World!"}' https://hooks.slack.com/services/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
+      - uses: actions/checkout@v2
+      - name: Slack Notification
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+        with:
+          args: '{\"channel\":\"D04JLN0UE2C\", \"text\":\"Hello world from Roshan\",}'
