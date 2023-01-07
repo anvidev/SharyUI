@@ -36,5 +36,5 @@ export const TypeTextarea = Template.bind({});
 TypeTextarea.args = {
   type: 'textarea',
   inputId: 'exampleId',
-  placeholder: 'Email placeholder',
+  placeholder: 'Textarea placeholder',
 };
