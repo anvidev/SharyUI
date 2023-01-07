@@ -1,4 +1,4 @@
-name: Announce the release on Slack
+name: Announce the release of new version on Slack
 run-name: ${{ github.actor }} has published new release for the library 🚀
 on:
   push:
