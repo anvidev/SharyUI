@@ -67,7 +67,7 @@ export const Input = ({
   if (type == 'textarea') {
     return (
       <textarea
-        className={`${BASE_INPUT_CLASSES} ${computedClasses} py-2`}
+        className={`${BASE_INPUT_CLASSES} ${computedClasses} py-2 min-h-[100px]`}
         aria-placeholder={placeholder}
         placeholder={placeholder}
         aria-required={required}

@@ -93,7 +93,11 @@ export const Select = ({
         </span>
       </div>
       {showOptions && (
-        <div className="absolute z-10 w-64 mt-2 overflow-scroll border rounded select-none max-h-48 border-slate-400">
+        <div
+          className={`absolute z-10 w-64 mt-2 overflow-scroll border rounded select-none max-h-48 border-slate-400 ${getWidthClasses(
+            fullWidth
+          )}`}
+        >
           {isSearchable && (
             <div className="w-full px-3">
               <input
