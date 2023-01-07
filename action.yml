@@ -8,6 +8,12 @@ inputs:
   title:
     required: true
     description: Message title
+  body:
+    required: false
+    description: Message body (markdown allowed but needs to be Slackified first)
+  context:
+    required: true
+    description: Which project is being released?
 runs:
   using: 'composite'
   steps:
