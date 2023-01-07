@@ -21,13 +21,13 @@ jobs:
   slack:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Get latest commit info
         run: |
           echo "::set-output name=TITLE::$(git show -1 --format='%s' -s)"
           echo "::set-output name=BODY::$(git show -1 --format='%b' -s)"
         id: latest_commit
-      - uses: homeday-de/slack-release-bot-action@main
+      - uses: andreasgylche/SharyUI@notifications
         with:
           webhook_url: https://hooks.slack.com/services/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
           title: ${{ steps.latest_commit.outputs.TITLE }}
