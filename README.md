@@ -44,24 +44,6 @@ function App() {
 }
 ```
 
-## List of components
-
-- [x] Button
-- [ ] Icon button
-- [x] Label
-- [x] Input
-- [x] Heading
-- [x] Text
-- [x] Select (missing multiple choice)
-- [x] Checkbox
-- [x] Radio
-- [x] Avatar
-- [ ] Tooltip
-- [ ] Modal
-- [ ] Input Group
-- [x] Checkbox Group
-- [x] Radio Group
-
 ## Documentation
 
 - [Developer documentation](https://shary-ui.vercel.app)
