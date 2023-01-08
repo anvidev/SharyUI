@@ -8,3 +8,4 @@ export { Label } from './components/Label';
 export { Radio } from './components/Radio';
 export { RadioGroup } from './components/RadioGroup';
 export { CheckboxGroup } from './components/CheckboxGroup';
+export { Select } from './components/Select';
